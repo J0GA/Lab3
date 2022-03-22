@@ -24,21 +24,16 @@ public class Location
         this(0, 0);
     }
 
-    /** Compares this Location to another. **/
-    public boolean equals(Object obj) {
+    public boolean equals(Object obj) { //Обеспечивает реализацию equals()
         if (obj instanceof Location) {
-            // Cast another object to Location type,
-            // then compare.  Return true if equal.
             Location other = (Location) obj;
             return xCoord == other.xCoord && yCoord == other.yCoord;
         }
         return false;
     }
 
-    public int hashCode()
-    {
-        int result = 19; // Some prime value
-        // Use another prime value to combine
+    public int hashCode() { //Обеспечивает реализацию hashcode()
+        int result = 19;
         result = 17 * result + (xCoord * 11);
         result = 23 * result + (yCoord * 13);
         return result;

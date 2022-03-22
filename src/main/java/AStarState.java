@@ -13,7 +13,6 @@ public class AStarState
     private Map2D map;
 
     private HashMap<Location, Waypoint> openWaypoints;
-
     private HashMap<Location, Waypoint> closedWaypoints;
 
     /**
